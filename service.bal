@@ -1,6 +1,7 @@
 import ballerina/http;
 
 configurable string url = ?;
+configurable decimal minEvictableIdleTime = ?;
 
 service / on new http:Listener(9090) {
 
@@ -9,7 +10,7 @@ service / on new http:Listener(9090) {
         http:Client clientEndpoint = check new (url, {
             httpVersion: "2.0",
             poolConfig: {
-                minEvictableIdleTime: 300 //Minimum evictable time for an idle connection in seconds. Default value is 5 minutes
+                minEvictableIdleTime: minEvictableIdleTime //Minimum evictable time for an idle connection in seconds. Default value is 5 minutes
             }
         });
 
