@@ -2,7 +2,7 @@
 org = "sarindas"
 name = "cs_kickoff_demo"
 version = "0.1.0"
-distribution = "2201.9.3"
+distribution = "2201.7.2"
 
 [build-options]
 observabilityIncluded = true
